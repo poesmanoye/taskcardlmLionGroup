@@ -30,7 +30,7 @@ if not st.session_state.auth:
         text-align:justify;
         margin-bottom:18px;">
         🚫 <b>INFORMASI TERBARU</b><br><br>
-        Taskcard <b>TASKCARD DAILY SUPER AIR JET</b> <u>SUDAH DI UPDATE KE REVISI TERBARU</u>
+        Taskcard <b>TASKCARD A320 BATIK DAN SAJ</b> <u>SUDAH DI UPDATE KE REVISI TERBARU</u>
     </div>
     """, unsafe_allow_html=True)
     
@@ -130,15 +130,15 @@ else:
 
     # List Template
     page_ranges = {
-        "TC DAILY CHECK A320 BATIK REV 08.pdf": (1, 27),
+        "TC DAILY CHECK A320 BATIK REV 08.pdf": (1, 11),
         "TC DAILY CHECK B737 BATIK REV 22.pdf": (1, 18),
         "TC DAILY CHECK B737 LION REV 39.pdf": (1, 31),
-        "TC DAILY CHECK A320 SUPER AIR JET REV 10.pdf": (1, 27),
+        "TC DAILY CHECK A320 SUPER AIR JET REV 10.pdf": (1, 7),
         "TC DAILY CHECK ATR72 WINGS REV 28.pdf": (1, 31),
-        "TC PRE-FLIGHT CHECK A320 BATIK REV 02.pdf": (1, 9),
+        "TC PRE-FLIGHT CHECK A320 BATIK REV 02.pdf": (1, 4),
         "TC PRE-FLIGHT CHECK B737 BATIK REV 15.pdf": (1, 13),
         "TC PRE-FLIGHT CHECK B737 LION REV 14.pdf": (1, 9),
-        "TC PRE-FLIGHT CHECK A320 SUPER AIR JET REV 01.pdf": (1, 8),
+        "TC PRE-FLIGHT CHECK A320 SUPER AIR JET REV 01.pdf": (1, 3),
         "TC PRE-FLIGHT CHECK ATR72 WINGS REV 15.pdf": (1, 10),
         "TC WEEKLY CHECK A320 SUPER AIR JET REV 10.pdf": (1, 16),
         "TC WEEKLY CHECK A320 BATIK REV 10.pdf": (1, 16),
@@ -377,48 +377,14 @@ else:
 
                             # === DAILY SUPER AIR JET ===
                             elif template_name == "TC DAILY CHECK A320 SUPER AIR JET REV 10.pdf":
-
-                                # ===============================
-                                # HALAMAN 18 → KOSONG
-                                # ===============================
-                                if i == start_page + 17:
-                                    pass
-
-                                # ===============================
-                                # HALAMAN 19 → TURUN
-                                # ===============================
-                                elif i == start_page + 12:
-                                    can.drawString(65, 724, work_order)
-                                    can.drawString(147, 724, ac_reg)
-                                    can.drawString(203, 724, ac_msn)
-                                    can.drawString(277, 724, ac_eff)
-                                    can.drawString(345, 724, operator)
-
-                                # ===============================
-                                # HALAMAN 19 → TURUN
-                                # ===============================
-                                elif i == start_page + 18:
-                                    can.drawString(65, 724, work_order)
-                                    can.drawString(147, 724, ac_reg)
-                                    can.drawString(203, 724, ac_msn)
-                                    can.drawString(277, 724, ac_eff)
-                                    can.drawString(345, 724, operator)
-
-                                # ===============================
-                                # YANG KAMU MINTA → TETAP DIPERTAHANKAN
-                                # ===============================
-                                elif i == start_page or i == start_page + 2:
-                                    can.drawString(482, 735, work_order)
-                                    can.drawString(45, 703, ac_reg)
-                                    can.drawString(117, 703, ac_msn)
-                                    can.drawString(123, 735, ac_eff)
-                                    can.drawString(29, 636, operator)
-                                    can.drawString(119, 636, place)
-                                    can.drawString(51, 735, ac_type)
-
-                                # ===============================
-                                # HALAMAN LAIN (DEFAULT)
-                                # ===============================
+                                if i == start_page:
+                                    can.drawString(480, 734, work_order)
+                                    can.drawString(47, 702, ac_reg)
+                                    can.drawString(118, 702, ac_msn)
+                                    can.drawString(123, 734, ac_eff)
+                                    can.drawString(29, 635, operator)
+                                    can.drawString(120, 635, place)
+                                    can.drawString(52, 734, ac_type)
                                 else:
                                     can.drawString(65, 733, work_order)
                                     can.drawString(147, 733, ac_reg)
