@@ -290,6 +290,23 @@ else:
                                     can.drawString(270, 734, ac_eff)
                                     can.drawString(360, 734, operator)
 
+                            # === TC PRE-FLIGHT B737 LION REV 39 ===
+                            if template_name == "TC PRE-FLIGHT CHECK B737 LION CERTIFICATE REV 15.pdf":
+                                if i == start_page :
+                                    can.drawString(480, 734, work_order)
+                                    can.drawString(45, 703, ac_reg)
+                                    can.drawString(118, 703, ac_msn)
+                                    can.drawString(115, 734, ac_eff)
+                                    can.drawString(43, 630, operator)
+                                    can.drawString(120, 630, place)
+                                    can.drawString(34, 734, ac_type)
+                                else:
+                                    can.drawString(66, 734, work_order)
+                                    can.drawString(145, 734, ac_reg)
+                                    can.drawString(203, 734, ac_msn)
+                                    can.drawString(270, 734, ac_eff)
+                                    can.drawString(360, 734, operator)
+
                             # === DAILY BATIK A320 REV 08 ===
                             elif template_name == "TC DAILY CHECK A320 BATIK CERTIFICATE REV 08.pdf":
                                 if i == start_page:
