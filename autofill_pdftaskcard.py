@@ -130,20 +130,20 @@ else:
 
     # List Template
     page_ranges = {
-        "TC DAILY CHECK A320 BATIK REV 08.pdf": (1, 11),
-        "TC DAILY CHECK B737 BATIK REV 22.pdf": (1, 18),
-        "TC DAILY CHECK B737 LION REV 39.pdf": (1, 31),
-        "TC DAILY CHECK A320 SUPER AIR JET REV 10.pdf": (1, 7),
-        "TC DAILY CHECK ATR72 WINGS REV 28.pdf": (1, 31),
-        "TC PRE-FLIGHT CHECK A320 BATIK REV 02.pdf": (1, 4),
-        "TC PRE-FLIGHT CHECK B737 BATIK REV 15.pdf": (1, 13),
-        "TC PRE-FLIGHT CHECK B737 LION REV 14.pdf": (1, 9),
-        "TC PRE-FLIGHT CHECK A320 SUPER AIR JET REV 01.pdf": (1, 3),
-        "TC PRE-FLIGHT CHECK ATR72 WINGS REV 15.pdf": (1, 10),
-        "TC WEEKLY CHECK A320 SUPER AIR JET REV 10.pdf": (1, 16),
-        "TC WEEKLY CHECK A320 BATIK REV 10.pdf": (1, 16),
-        "TC WEEKLY CHECK ATR72 WINGS REV 17.pdf": (1, 16),
-        "TC LINE CHECK ATR72 WINGS REV 10.pdf": (1, 16),      
+        "TC DAILY CHECK A320 BATIK CERTIFICATE REV 08.pdf": (1, 11),
+        "TC DAILY CHECK B737 BATIK CERTIFICATE REV 22.pdf": (1, 18),
+        "TC DAILY CHECK B737 LION CERTIFICATE REV 39.pdf": (1, 6),
+        "TC DAILY CHECK A320 SUPER AIR JET CERTIFICATE REV 10.pdf": (1, 7),
+        "TC DAILY CHECK ATR72 WINGS CERTIFICATE REV 28.pdf": (1, 31),
+        "TC PRE-FLIGHT CHECK A320 BATIK CERTIFICATE REV 02.pdf": (1, 4),
+        "TC PRE-FLIGHT CHECK B737 BATIK CERTIFICATE REV 15.pdf": (1, 13),
+        "TC PRE-FLIGHT CHECK B737 LION CERTIFICATE REV 14.pdf": (1, 5),
+        "TC PRE-FLIGHT CHECK A320 SUPER AIR JET CERTIFICATE REV 01.pdf": (1, 3),
+        "TC PRE-FLIGHT CHECK ATR72 WINGS CERTIFICATE REV 15.pdf": (1, 10),
+        "TC WEEKLY CHECK A320 SUPER AIR JET CERTIFICATE REV 10.pdf": (1, 16),
+        "TC WEEKLY CHECK A320 BATIK CERTIFICATE REV 10.pdf": (1, 16),
+        "TC WEEKLY CHECK ATR72 WINGS CERTIFICATE REV 17.pdf": (1, 16),
+        "TC LINE CHECK ATR72 WINGS CERTIFICATE REV 10.pdf": (1, 16),      
     }
 
     template_name = st.selectbox("📄 Choose TaskCard", list(page_ranges.keys()), index=3)
@@ -274,8 +274,8 @@ else:
                             # ======================================================
 
                             # === TC DAILY B737 LION REV 39 ===
-                            if template_name == "TC DAILY CHECK B737 LION REV 39.pdf":
-                                if i == start_page or i == start_page + 2:
+                            if template_name == "TC DAILY CHECK B737 LION CERTIFICATE REV 39.pdf":
+                                if i == start_page :
                                     can.drawString(480, 734, work_order)
                                     can.drawString(45, 703, ac_reg)
                                     can.drawString(118, 703, ac_msn)
@@ -291,7 +291,7 @@ else:
                                     can.drawString(360, 734, operator)
 
                             # === DAILY BATIK A320 REV 08 ===
-                            elif template_name == "TC DAILY CHECK A320 BATIK REV 08.pdf":
+                            elif template_name == "TC DAILY CHECK A320 BATIK CERTIFICATE REV 08.pdf":
                                 if i == start_page:
                                     can.drawString(482, 735, work_order)
                                     can.drawString(45, 703, ac_reg)
@@ -308,7 +308,7 @@ else:
                                     can.drawString(357, 733, operator)
 
                             # === PRE-FLIGHT A320 BATIK REV 02 ===
-                            elif template_name == "TC PRE-FLIGHT CHECK A320 BATIK REV 02.pdf":
+                            elif template_name == "TC PRE-FLIGHT CHECK A320 BATIK CERTIFICATE REV 02.pdf":
                                 if i == start_page:
                                     can.drawString(480, 734, work_order)
                                     can.drawString(47, 702, ac_reg)
@@ -325,7 +325,7 @@ else:
                                     can.drawString(357, 733, operator)
                                     
                             # === WEEKLY A320 BATIK REV 10 ===
-                            elif template_name == "TC WEEKLY CHECK A320 BATIK REV 10.pdf":
+                            elif template_name == "TC WEEKLY CHECK A320 BATIK CERTIFICATEREV 10.pdf":
                                 if i == start_page:
                                     can.drawString(480, 734, work_order)
                                     can.drawString(47, 702, ac_reg)
@@ -342,7 +342,7 @@ else:
                                     can.drawString(357, 733, operator)
 
                             # === DAILY BATIK 737 REV 22 ==
-                            elif template_name == "TC DAILY CHECK B737 BATIK REV 22.pdf":
+                            elif template_name == "TC DAILY CHECK B737 BATIK CERTIFICATE REV 22.pdf":
                                 if i == start_page:
                                     can.drawString(480, 734, work_order)
                                     can.drawString(45, 703, ac_reg)
@@ -359,7 +359,7 @@ else:
                                     can.drawString(355, 733, operator)           
                                     
                             # === PRE-FLIGHT BATIK 737 REV 15 ==
-                            elif template_name == "TC PRE-FLIGHT CHECK B737 BATIK REV 15.pdf":
+                            elif template_name == "TC PRE-FLIGHT CHECK B737 BATIK CERTIFICATE REV 15.pdf":
                                 if i == start_page:
                                     can.drawString(480, 734, work_order)
                                     can.drawString(45, 703, ac_reg)
@@ -376,7 +376,7 @@ else:
                                     can.drawString(355, 733, operator)                                   
 
                             # === DAILY SUPER AIR JET ===
-                            elif template_name == "TC DAILY CHECK A320 SUPER AIR JET REV 10.pdf":
+                            elif template_name == "TC DAILY CHECK A320 SUPER AIR JET CERTIFICATE REV 10.pdf":
                                 if i == start_page:
                                     can.drawString(480, 734, work_order)
                                     can.drawString(47, 702, ac_reg)
@@ -393,7 +393,7 @@ else:
                                     can.drawString(345, 733, operator)
 
                             # === PRE-FLIGHT SUPER AIR JET ===
-                            elif template_name == "TC PRE-FLIGHT CHECK A320 SUPER AIR JET REV 01.pdf":
+                            elif template_name == "TC PRE-FLIGHT CHECK A320 SUPER AIR JET CERTIFICATE REV 01.pdf":
                                 if i == start_page:
                                     can.drawString(480, 734, work_order)
                                     can.drawString(47, 702, ac_reg)
@@ -410,7 +410,7 @@ else:
                                     can.drawString(345, 733, operator)
 
                             # === WEEKLY SUPER AIR JET ===
-                            elif template_name == "TC WEEKLY CHECK A320 SUPER AIR JET REV 10.pdf":
+                            elif template_name == "TC WEEKLY CHECK A320 SUPER AIR JET CERTIFICATE REV 10.pdf":
                                 if i == start_page:
                                     can.drawString(480, 734, work_order)
                                     can.drawString(47, 702, ac_reg)
@@ -427,7 +427,7 @@ else:
                                     can.drawString(345, 733, operator)
 
                             # === DAILY WINGS AIR ===
-                            elif template_name == "TC DAILY CHECK ATR72 WINGS REV 28.pdf":
+                            elif template_name == "TC DAILY CHECK ATR72 WINGS CERTIFICATE REV 28.pdf":
                                 if i == start_page:
                                     can.drawString(482, 735, work_order)
                                     can.drawString(45, 703, ac_reg)
@@ -444,7 +444,7 @@ else:
                                     can.drawString(345, 733, operator)
 
                             # === PRE-FLIGHT WINGS AIR ===
-                            elif template_name == "TC PRE-FLIGHT CHECK ATR72 WINGS REV 15.pdf":
+                            elif template_name == "TC PRE-FLIGHT CHECK ATR72 WINGS CERTIFICATE REV 15.pdf":
                                 if i == start_page:
                                     can.drawString(480, 734, work_order)
                                     can.drawString(47, 702, ac_reg)
@@ -461,7 +461,7 @@ else:
                                     can.drawString(345, 733, operator)
 
                             # === WEEKLY WINGS AIR ===
-                            elif template_name == "TC WEEKLY CHECK ATR72 WINGS REV 17.pdf":
+                            elif template_name == "TC WEEKLY CHECK ATR72 WINGS CERTIFICATE REV 17.pdf":
                                 if i == start_page:
                                     can.drawString(480, 734, work_order)
                                     can.drawString(47, 702, ac_reg)
@@ -478,7 +478,7 @@ else:
                                     can.drawString(345, 733, operator)
 
                             # === LINE WINGS AIR ===
-                            elif template_name == "TC LINE CHECK ATR72 WINGS REV 10.pdf":
+                            elif template_name == "TC LINE CHECK ATR72 WINGS CERTIFICATE REV 10.pdf":
                                 if i == start_page:
                                     can.drawString(480, 734, work_order)
                                     can.drawString(47, 702, ac_reg)
