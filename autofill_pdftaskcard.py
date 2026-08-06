@@ -9,7 +9,7 @@ import base64
 st.set_page_config(page_title="TASKCARD LION GROUP", layout="centered")
 
 # === LOGIN SYSTEM ===
-PASSWORD = "PKU321"
+PASSWORD = "LION321"
 
 if "auth" not in st.session_state:
     st.session_state.auth = False
@@ -92,7 +92,7 @@ st.markdown("""
 st.markdown(f"""
     <div class="header-container" style="text-align:center; margin-top:-25px;">
         <img src="data:image/png;base64,{logo_base64}" width="140">
-        <h1>TASKCARD LINE MAINTENANCE PKU</h1>
+        <h1>TASKCARD LINE MAINTENANCE LION GROUP</h1>
         <p>TASKCARD DAILY CHECK, PRE-FLIGHT CHECK, WEEKLY CHECK AIRBUS A320 AND BOEING 737</p>
     </div>
 """, unsafe_allow_html=True)
