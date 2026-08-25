@@ -16,7 +16,7 @@ if "auth" not in st.session_state:
 
 if not st.session_state.auth:
     st.markdown(
-    "<h1 style='text-align: center;'>ðŸ” LOGIN REQUIRED</h1>",
+    "<h1 style='text-align: center;'LOGIN REQUIRED</h1>",
     unsafe_allow_html=True
 )
     st.markdown("""
@@ -146,7 +146,7 @@ else:
         "TC LINE CHECK ATR WINGS CERTIFICATE REV 10.pdf": (1, 2),
     }
 
-    template_name = st.selectbox("ðŸ“„ Choose TaskCard", list(page_ranges.keys()), index=3)
+    template_name = st.selectbox("Choose TaskCard", list(page_ranges.keys()), index=3)
     start_page, end_page = page_ranges[template_name]
     start_page -= 1
 
@@ -178,7 +178,7 @@ else:
 
         # Cek input kosong
         if not all([work_order, ac_reg, ac_msn, ac_type, ac_eff, operator, place]):
-            st.warning("âš ï¸ Harap isi semua kolom sebelum generate Taskcard!")
+            st.warning("Harap isi semua kolom sebelum generate Taskcard!")
 
         else:
 
@@ -189,7 +189,7 @@ else:
 
             if "B737" in ac_type.upper() and operator.upper() in ["LION AIR", "BATIK AIR"]:
                 if not any(ac_eff.upper().startswith(prefix) for prefix in valid_prefix):
-                    st.error("âš ï¸ Untuk B737 Lion/Batik, A/C Effectivity harus diawali MLI, ETJ, ILF, atau GEF.")
+                    st.error("Untuk B737 Lion/Batik, A/C Effectivity harus diawali MLI, ETJ, ILF, atau GEF.")
                     st.stop()
                     
             # Operator lain â†’ TIDAK divalidasi
@@ -198,13 +198,13 @@ else:
             # ðŸ”¸ VALIDASI OPERATOR VS TEMPLATE
             # ======================================================
             if "LION" in template_name.upper() and "LION" not in operator.upper():
-                st.error("âš ï¸ Operator tidak sesuai! Taskcard ini untuk LION AIR.")
+                st.error("Operator tidak sesuai! Taskcard ini untuk LION AIR.")
             elif "BATIK" in template_name.upper() and "BATIK" not in operator.upper():
-                st.error("âš ï¸ Operator tidak sesuai! Taskcard ini untuk BATIK AIR.")
+                st.error("Operator tidak sesuai! Taskcard ini untuk BATIK AIR.")
             elif "SUPER AIR JET" in template_name.upper() and "SUPER AIR JET" not in operator.upper():
-                st.error("âš ï¸ Operator tidak sesuai! Taskcard ini untuk SUPER AIR JET.")
+                st.error("Operator tidak sesuai! Taskcard ini untuk SUPER AIR JET.")
             elif "WINGS" in template_name.upper() and "WINGS AIR" not in operator.upper():
-                st.error("âš ï¸ Operator tidak sesuai! Taskcard ini untuk WINGS AIR.")
+                st.error("Operator tidak sesuai! Taskcard ini untuk WINGS AIR.")
             else:
 
                 # ======================================================
@@ -214,46 +214,46 @@ else:
                 # --- B737 BATIK ---
                 if "B737" in template_name and "BATIK" in template_name:
                     if operator.upper() != "BATIK AIR":
-                        st.error("âš ï¸ Operator harus BATIK AIR untuk taskcard ini.")
+                        st.error("Operator harus BATIK AIR untuk taskcard ini.")
                         st.stop()
                     if not ac_type.startswith("B737"):
-                        st.error("âš ï¸ A/C TYPE harus B737-800 NG atau B737-900 ER untuk taskcard B737 BATIK.")
+                        st.error("A/C TYPE harus B737-800 NG atau B737-900 ER untuk taskcard B737 BATIK.")
                         st.stop()
                 
                 # --- A320 BATIK ---
                 elif "A320" in template_name and "BATIK" in template_name:
                     if operator.upper() != "BATIK AIR":
-                        st.error("âš ï¸ Operator harus BATIK AIR untuk taskcard ini.")
+                        st.error("Operator harus BATIK AIR untuk taskcard ini.")
                         st.stop()
                     if ac_type != "A320":
-                        st.error("âš ï¸ A/C TYPE harus A320 untuk taskcard A320 BATIK.")
+                        st.error("A/C TYPE harus A320 untuk taskcard A320 BATIK.")
                         st.stop()
                 
                 # --- B737 LION ---
                 elif "B737" in template_name and "LION" in template_name:
                     if operator.upper() != "LION AIR":
-                        st.error("âš ï¸ Operator harus LION AIR untuk taskcard ini.")
+                        st.error("Operator harus LION AIR untuk taskcard ini.")
                         st.stop()
                     if not ac_type.startswith("B737"):
-                        st.error("âš ï¸ A/C TYPE harus B737 untuk taskcard B737 LION.")
+                        st.error("A/C TYPE harus B737 untuk taskcard B737 LION.")
                         st.stop()
                 
                 # --- A320 SUPER AIR JET ---
                 elif "A320" in template_name and "SUPER AIR JET" in template_name:
                     if operator.upper() != "SUPER AIR JET":
-                        st.error("âš ï¸ Operator harus SUPER AIR JET untuk taskcard ini.")
+                        st.error("Operator harus SUPER AIR JET untuk taskcard ini.")
                         st.stop()
                     if ac_type != "A320":
-                        st.error("âš ï¸ A/C TYPE harus A320 untuk taskcard A320 SUPER AIR JET.")
+                        st.error("A/C TYPE harus A320 untuk taskcard A320 SUPER AIR JET.")
                         st.stop()
 
                 # --- WINGS AIR ---
                 elif "ATR72" in template_name.upper() and "WINGS" in template_name.upper():
                     if operator.upper() != "WINGS AIR":
-                        st.error("âš ï¸ Operator harus WINGS AIR untuk taskcard ini.")
+                        st.error("Operator harus WINGS AIR untuk taskcard ini.")
                         st.stop()
                     if ac_type != "ATR72":
-                        st.error("âš ï¸ A/C TYPE harus ATR72 untuk taskcard ATR72 WINGS AIR.")
+                        st.error("A/C TYPE harus ATR72 untuk taskcard ATR72 WINGS AIR.")
                         st.stop()
                 # ======================================================
                 # PROCESS PDF
@@ -547,20 +547,20 @@ else:
                     pdf_data = result.getvalue()
                     b64 = base64.b64encode(pdf_data).decode("utf-8")
 
-                    st.success(f"âœ… Taskcard Berhasil Diisi: {template_name} (hal {start_page+1}â€“{end_page})")
-                    st.markdown(f"""
+                    st.success("Taskcard Berhasil Diisi: {template_name} (hal {start_page+1}â€“{end_page})")
+                    st.markdown("""
                     <div style="text-align:center; margin-top:20px;">
                         <a href="data:application/pdf;base64,{b64}" 
                            download="FINAL_{template_name.replace('.pdf', '')}.pdf"
                            style="background:#2563eb; color:white; padding:10px 20px; border-radius:8px;
-                                  font-weight:600; text-decoration:none;">â¬‡ï¸ DOWNLOAD TASKCARD</a>
+                                  font-weight:600; text-decoration:none;">DOWNLOAD TASKCARD</a>
                     </div>
                     <iframe src="data:application/pdf;base64,{b64}" width="100%" height="700px" 
                             style="border:1px solid #ccc; border-radius:10px; margin-top:20px;"></iframe>
                     """, unsafe_allow_html=True)
 
                 except FileNotFoundError:
-                    st.error("âš ï¸ File template tidak ditemukan. Pastikan semua PDF ada di folder yang sama dengan app.py")
+                    st.error("File template tidak ditemukan. Pastikan semua PDF ada di folder yang sama dengan app.py")
 
 
 # Footer
