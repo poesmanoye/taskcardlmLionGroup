@@ -291,7 +291,7 @@ else:
                                     can.drawString(360, 734, operator)
 
                             # === TC PRE-FLIGHT B737 LION REV 39 ===
-                            if template_name == "TC PRE-FLIGHT CHECK B737 LION CERTIFICATE REV 15.pdf":
+                            elif template_name == "TC PRE-FLIGHT CHECK B737 LION CERTIFICATE REV 15.pdf":
                                 if i == start_page :
                                     can.drawString(480, 734, work_order)
                                     can.drawString(45, 703, ac_reg)
