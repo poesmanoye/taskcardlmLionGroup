@@ -547,7 +547,7 @@ else:
                     pdf_data = result.getvalue()
                     b64 = base64.b64encode(pdf_data).decode("utf-8")
 
-                    st.success("Taskcard Berhasil Diisi: {template_name} (hal {start_page+1}â€“{end_page})")
+                    st.success("Taskcard Berhasil Diisi: {template_name} (hal {start_page+1} {end_page})")
                     st.markdown("""
                     <div style="text-align:center; margin-top:20px;">
                         <a href="data:application/pdf;base64,{b64}" 
