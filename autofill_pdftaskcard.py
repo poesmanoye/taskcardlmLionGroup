@@ -4,6 +4,9 @@ from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import A4
 from io import BytesIO
 import base64
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
 
 # --- Konfigurasi halaman ---
 st.set_page_config(page_title="TASKCARD LION GROUP", layout="centered")
@@ -16,7 +19,7 @@ if "auth" not in st.session_state:
 
 if not st.session_state.auth:
     st.markdown(
-    "<h1 style='text-align: center;'LOGIN REQUIRED</h1>",
+    "<h1 style='text-align: center;'>LOGIN REQUIRED</h1>",
     unsafe_allow_html=True
 )
     st.markdown("""
@@ -64,7 +67,7 @@ def get_base64_of_image(image_path):
 
 
 # load logo
-logo_base64 = get_base64_of_image("download-removebg-preview.png")
+logo_base64 = get_base64_of_image(BASE_DIR / "download-removebg-preview.png")
 
 # CSS header
 st.markdown("""
@@ -259,7 +262,7 @@ else:
                 # PROCESS PDF
                 # ======================================================
                 try:
-                    template = PdfReader(template_name)
+                    template = PdfReader(BASE_DIR / template_name)
                     output = PdfWriter()
 
                     for i, page in enumerate(template.pages):
@@ -547,8 +550,8 @@ else:
                     pdf_data = result.getvalue()
                     b64 = base64.b64encode(pdf_data).decode("utf-8")
 
-                    st.success("Taskcard Berhasil Diisi: {template_name} (hal {start_page+1} {end_page})")
-                    st.markdown("""
+                    st.success(f"Taskcard Berhasil Diisi: {template_name} (hal {start_page + 1}-{end_page})")
+                    st.markdown(f"""
                     <div style="text-align:center; margin-top:20px;">
                         <a href="data:application/pdf;base64,{b64}" 
                            download="FINAL_{template_name.replace('.pdf', '')}.pdf"
