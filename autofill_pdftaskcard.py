@@ -29,7 +29,7 @@ if not st.session_state.auth:
         font-size:15px;
         text-align:justify;
         margin-bottom:18px;">
-        ðŸš« <b>INFORMASI TERBARU</b><br><br>
+        <b>INFORMASI TERBARU</b><br><br>
         Taskcard <b>TASKCARD DAILY/PF LION,SAJ,BATIK</b> <u>SUDAH DI UPDATE KE REVISI TERBARU DAN UNTUK WINGS BELUM ADA DI EMRO</u>
     . GUNAKAN FIREFOX SUPAYA TASCKCARD BISA LANGSUNG DI PRINT TANPA MENDOWNLOADNYA TERLEBIH DAHULU</div>
     """, unsafe_allow_html=True)
