@@ -132,7 +132,7 @@ else:
     page_ranges = {
         "TC DAILY CHECK A320 BATIK CERTIFICATE REV 10.pdf": (1, 8),
         "TC DAILY CHECK B737 BATIK CERTIFICATE REV 23.pdf": (1, 8),
-        "TC DAILY CHECK B737 LION CERTIFICATE REV 39.pdf": (1, 6),
+        "TC DAILY CHECK B737 LION CERTIFICATE REV 40.pdf": (1, 7),
         "TC DAILY CHECK A320 SUPER AIR JET CERTIFICATE REV 13.pdf": (1, 7),
         "TC DAILY CHECK ATR WINGS CERTIFICATE REV 03.pdf": (1, 6),
         "TC PRE-FLIGHT CHECK A320 BATIK CERTIFICATE REV 04.pdf": (1, 4),
@@ -273,7 +273,7 @@ else:
                             # === PENEMPATAN KOORDINAT ===
                             # ======================================================
 
-                            # === TC DAILY B737 LION REV 39 ===
+                            # === TC DAILY B737 LION REV 40 ===
                             if template_name == "TC DAILY CHECK B737 LION CERTIFICATE REV 39.pdf":
                                 if i == start_page :
                                     can.drawString(480, 734, work_order)
