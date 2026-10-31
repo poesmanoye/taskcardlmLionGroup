@@ -132,12 +132,12 @@ else:
     page_ranges = {
         "TC DAILY CHECK A320 BATIK CERTIFICATE REV 10.pdf": (1, 8),
         "TC DAILY CHECK B737 BATIK CERTIFICATE REV 23.pdf": (1, 8),
-        "TC DAILY CHECK B737 LION CERTIFICATE REV 41.pdf": (1, 7),
+        "TC DAILY CHECK B737 LION CERTIFICATE REV 41.pdf": (1, 8),
         "TC DAILY CHECK A320 SUPER AIR JET CERTIFICATE REV 13.pdf": (1, 7),
         "TC DAILY CHECK ATR WINGS CERTIFICATE REV 03.pdf": (1, 6),
         "TC PRE-FLIGHT CHECK A320 BATIK CERTIFICATE REV 04.pdf": (1, 4),
         "TC PRE-FLIGHT CHECK B737 BATIK CERTIFICATE REV 16.pdf": (1, 6),
-        "TC PRE-FLIGHT CHECK B737 LION CERTIFICATE REV 15.pdf": (1, 5),
+        "TC PRE-FLIGHT CHECK B737 LION CERTIFICATE REV 15.pdf": (1, 6),
         "TC PRE-FLIGHT CHECK A320 SUPER AIR JET CERTIFICATE REV 02.pdf": (1, 3),
         "TC PRE-FLIGHT CHECK ATR WINGS CERTIFICATE REV 2.pdf": (1, 10),
         "TC WEEKLY CHECK A320 SUPER AIR JET CERTIFICATE REV 12.pdf": (1, 5),
@@ -276,18 +276,18 @@ else:
                             # === TC DAILY B737 LION REV 40 ===
                             if template_name == "TC DAILY CHECK B737 LION CERTIFICATE REV 41.pdf":
                                 if i == start_page :
-                                    can.drawString(480, 734, work_order)
+                                    can.drawString(478, 734, work_order)
                                     can.drawString(45, 703, ac_reg)
                                     can.drawString(118, 703, ac_msn)
-                                    can.drawString(115, 734, ac_eff)
+                                    can.drawString(113, 734, ac_eff)
                                     can.drawString(43, 630, operator)
                                     can.drawString(120, 630, place)
                                     can.drawString(33, 734, ac_type)
                                 else:
-                                    can.drawString(66, 734, work_order)
+                                    can.drawString(64, 734, work_order)
                                     can.drawString(145, 734, ac_reg)
                                     can.drawString(203, 734, ac_msn)
-                                    can.drawString(270, 734, ac_eff)
+                                    can.drawString(268, 734, ac_eff)
                                     can.drawString(360, 734, operator)
 
                             # === TC PRE-FLIGHT B737 LION REV 39 ===
