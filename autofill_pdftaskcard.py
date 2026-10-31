@@ -282,7 +282,7 @@ else:
                                     can.drawString(115, 734, ac_eff)
                                     can.drawString(43, 630, operator)
                                     can.drawString(120, 630, place)
-                                    can.drawString(29, 734, ac_type)
+                                    can.drawString(31, 734, ac_type)
                                 else:
                                     can.drawString(66, 734, work_order)
                                     can.drawString(145, 734, ac_reg)
@@ -299,7 +299,7 @@ else:
                                     can.drawString(115, 734, ac_eff)
                                     can.drawString(43, 630, operator)
                                     can.drawString(120, 630, place)
-                                    can.drawString(30, 734, ac_type)
+                                    can.drawString(31, 734, ac_type)
                                 else:
                                     can.drawString(66, 734, work_order)
                                     can.drawString(145, 734, ac_reg)
