@@ -274,7 +274,7 @@ else:
                             # ======================================================
 
                             # === TC DAILY B737 LION REV 40 ===
-                            if template_name == "TC DAILY CHECK B737 LION CERTIFICATE REV 41.pdf":
+                            if template_name == "TC DAILY CHECK B737 LION CERTIFICATE REV 42.pdf":
                                 if i == start_page :
                                     can.drawString(478, 734, work_order)
                                     can.drawString(45, 703, ac_reg)
